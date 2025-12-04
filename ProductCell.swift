@@ -3,7 +3,6 @@ import UIKit
 class ProductCell: UICollectionViewCell {
     static let id = "ProductCell"
     
-    // Callback замыкание для нажатия кнопки
     var didTapAdd: (() -> Void)?
     
     private let imageView: UIImageView = {
@@ -51,7 +50,6 @@ class ProductCell: UICollectionViewCell {
     }
     
     func configure(with product: Product) {
-        // Используем SF Symbols для заглушки
         imageView.image = UIImage(systemName: product.imageName)
         nameLabel.text = product.title
         costLabel.text = String(format: "$%.2f", product.cost)
